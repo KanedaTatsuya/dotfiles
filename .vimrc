@@ -101,6 +101,8 @@ nnoremap <S-Down>  <C-w>+<CR>
 " タブ間の移動
 nnoremap <C-n> gt
 nnoremap <C-p> gT
+" Ctrl + j で挿入モードを抜ける
+noremap! jj <esc>
 " Ctrl + e でツリー表示
 "nnoremap <C-e> :NERDTreeToggle<CR>
 " Vim NERDTree Tabs
