@@ -150,6 +150,10 @@ if dein#load_state(expand('~/.vim/dein'))
     call dein#add('vim-scripts/YankRing.vim') " テキストコピーの履歴を順々に参照できる。<C-p>, <C-n>で循環。
     call dein#add('davidhalter/jedi-vim', {'on_ft': 'python'}) " pythonの高機能な補完機能。
     call dein#add('jistr/vim-nerdtree-tabs')
+    call dein#add('mattn/emmet-vim')
+    call dein#add('plasticboy/vim-markdown')
+    call dein#add('kannokanno/previm')
+    call dein#add('tyru/open-browser.vim')
 
     call dein#end()
     call dein#save_state()
@@ -228,7 +232,7 @@ let g:NERDTreeChDirMode=2
 " windowサイズ設定
 let g:NERDTreeWinSize=20
 " 表示したくないファイル、ディレクトリ
-let g:NERDTreeIgnore=['\.DS_Store$', '\.swp$', '\~$', '\.so']
+let g:NERDTreeIgnore=['\.DS_Store$', '\.swp$', '\~$', '\.so', '__pycache__']
 " vim起動時に常に表示
 " autocmd vimenter * NERDTree
 " NERDTreeだけが残る場合はvim終了
@@ -257,3 +261,6 @@ let g:jedi#popup_on_dot = 0
 let g:jedi#popup_select_first = 0
 let g:jedi#completions_command = "<S-Tab>"
 autocmd FileType python setlocal completeopt-=preview
+
+" Markdown
+au BufRead,BufNewFile *.md set filetype=markdown
